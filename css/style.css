@@ -1,0 +1,42 @@
+* {
+	font-family: 'Helvetica Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	margin: 0;
+	}
+
+body {
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	padding-top: 7em;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+	display: inline;
+	padding: 0 1em;
+}
+
+p {
+	font-size: 1.2em;
+	line-height: 1.5em;
+	letter-spacing: 0.01em;
+}
+
+img {
+	width: 160px;
+	border-radius: 100%;
+}
+
+h1 {
+	font-size: 5em;
+	margin-bottom: 1em;
+}
+
+h2 {
+	font-size: 3em;
+	margin-top: 1em;
+}
