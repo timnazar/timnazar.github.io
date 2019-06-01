@@ -253,17 +253,17 @@ p a {
   background-image: url(/images/podcast.svg);
     }
     
-    article .tags {
+article .tags {
   display: inline-block;
-    }
-    
-    article .action {
+}
+
+article .action {
   display: inline-block;
   margin-top: 20px;
-  font-weight: bold;
+  /* font-weight: bold; */
   font-size: 1.2em;
-  color: #d03320;
-    }
+  color: #bebebe;
+}
     
     article .links {
   margin: 20px 0 28px 0;
