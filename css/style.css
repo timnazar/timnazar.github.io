@@ -1,42 +1,495 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
 * {
-	font-family: 'Helvetica Neue', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	margin: 0;
-	}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-	display: grid;
-	justify-items: center;
-	align-items: center;
-	padding-top: 7em;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
+/* High-level */
+.wrapper {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+/* Header */
+header {
+  position: relative;
+  /*background: linear-gradient(to bottom right, #ff644e, #cb3018);*/
+  background: #444444;
+  color: #eee;
+  line-height: 1.5em;
+}
+    
+header .wrapper {
+  padding: 30px;
+}
+
+header .logo {
+  width: 509px;
+  max-width: 80%;
+  margin-bottom: 10px;
+}
+
+header a {
+  text-decoration: underline;
+}
+
+header .actions {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+}
+
+header .actions li {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 12px;
+}
+
+header .actions a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+    
+header .actions .rss {
+  background-image: url(/images/rss.svg);
+}
+
+header .actions .twitter {
+  background-image: url(/images/twitter.svg);
+}
+
+/* Lists */
 ul {
-	padding: 0;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
-li {
-	list-style-type: none;
-	display: inline;
-	padding: 0 1em;
+.article-list article,
+.sponsors {
+  border-radius: 15px;
 }
 
-p {
-	font-size: 1.2em;
-	line-height: 1.5em;
-	letter-spacing: 0.01em;
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-img {
-	width: 160px;
-	border-radius: 100%;
+p a {
+  text-decoration: underline;
 }
 
-h1 {
-	font-size: 5em;
-	margin-bottom: 1em;
-}
-
-h2 {
-	font-size: 3em;
-	margin-top: 1em;
-}
+    a.button {
+  display: inline-block;
+  background-color: #d03320;
+  color: #fff;
+  padding: 3px 5px;
+  border-radius: 8px;
+  line-height: 1.5em;
+    }
+    
+    /* Headings */
+    
+    .wrapper > h2 {
+  text-align: left;
+  margin-left: 12px;
+  margin-bottom: 15px;
+  color: #444;
+    }
+    
+    /* Sponsors */
+    
+    .sponsors {
+  background-color: #f3f3f3;
+  padding: 20px;
+    }
+    
+    .sponsors ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 25px;
+    }
+    
+    .sponsors li,
+    .sponsors a {
+  display: inline-block;
+    }
+    
+    .sponsors li img {
+  max-width: 100%;
+  max-height: 40px;
+    }
+    
+    .sponsors .name {
+  display: block;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 10px 0;
+    }
+    
+    .sponsors .tagline {
+  color: #333;
+  font-size: 0.95em;
+    }
+    
+    .sponsor-bar {
+  background-color: #222;
+  padding: 7px 20px;
+  text-align: center;
+  color: #eee;
+    }
+    
+    .sponsor-bar a {
+  text-decoration: underline;
+    }
+    
+    /* Grid */
+    
+    .grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 15px;
+    }
+    
+    .grid > * {
+  display: flex;
+    }
+    
+    .grid .col2 {
+  grid-column-end: span 2;
+    }
+    
+    .grid .col3 {
+  grid-column-end: span 3;
+    }
+    
+    .grid .col4 {
+  grid-column-end: span 4;
+    }
+    
+    .grid .col6 {
+  grid-column-end: span 6;
+    }
+    
+    /* Articles */
+    
+    article {
+  width: 100%;
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px;
+    }
+    
+    .article-list article {
+  background-color: #f3f3f3;
+    }
+    
+    .article-list {
+  margin-bottom: 20px;
+    }
+    
+    .article-list article img {
+  max-width: 100%;
+  margin-bottom: 10px;
+    }
+    
+    article h1 {
+  font-size: 1.9em;
+  line-height: 1.1em;
+  margin-bottom: 10px;
+    }
+    
+    article h2 {
+  font-size: 1.5em;
+  line-height: 1.1em;
+  margin: 22px 0;
+    }
+    
+    article p {
+  margin-top: 20px;
+  font-size: 1.15em;
+  line-height: 1.5em;
+    }
+    
+    article .metadata .type {
+  display: inline-block;
+  text-transform: uppercase;
+  padding-left: 21px;
+  font-size: 0.9em;
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position-y: center;
+  margin: 0 6px 0 -2px;
+    }
+    
+    article.article .metadata .type {
+  background-image: url(/images/article.svg);
+    }
+    
+    article.video .metadata .type {
+  background-image: url(/images/video.svg);
+    }
+    
+    article.link .metadata .type {
+  background-image: url(/images/link.svg);
+    }
+    
+    article.podcast .metadata .type {
+  background-image: url(/images/podcast.svg);
+    }
+    
+    article .tags {
+  display: inline-block;
+    }
+    
+    article .action {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #d03320;
+    }
+    
+    article .links {
+  margin: 20px 0 28px 0;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+    }
+    
+    article .links:last-child {
+  margin-bottom: 0px;
+    }
+    
+    article .links p {
+  color: #d03320;
+  font-size: 1em;
+  margin: 0 0 12px 0;
+    }
+    
+    article .links ul {
+  list-style-type: disc;
+  padding-left: 20px;
+    }
+    
+    article .links li {
+  margin-top: 10px;
+  font-size: 1.15em;
+    }
+    
+    article .links a {
+  text-decoration: underline;
+    }
+    
+    /* Code */
+    
+    code {
+  font-family: 'Source Sans Pro', monospace;
+    }
+    
+    /* This hack is required since Firefox isn't able to render Source Code Pro */
+    @supports (-moz-appearance:none) {
+      code {
+    font-family: monospace;
+  }
+    }
+    
+    article p code {
+  background-color: #e2e2e2;
+  display: inline-block;
+  padding: 0 5px;
+  border-radius: 8px;
+  font-size: 0.9em;
+    }
+    
+    pre {
+  margin-top: 20px;
+    }
+    
+    pre code {
+  display: block;
+  background-color: #1a1a1a;
+  padding: 0 20px;
+  border-radius: 15px;
+  color: #a9bcbc;
+  line-height: 1.4em;
+  font-size: 1em;
+  overflow-x: auto;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
+    }
+    
+    pre code .keyword {
+  color: #e73289;
+    }
+    
+    pre code .type {
+  color: #8281ca;
+    }
+    
+    pre code .call {
+  color: #348fe5;
+    }
+    
+    pre code .property {
+  color: #21ab9d;
+    }
+    
+    pre code .number {
+  color: #db6f57;
+    }
+    
+    pre code .string {
+  color: #fa641e;
+    }
+    
+    pre code .comment {
+  color: #6b8a94;
+    }
+    
+    pre code .dotAccess {
+  color: #92b300;
+    }
+    
+    pre code .preprocessing {
+  color: #b68a00;
+    }
+    
+    /* Tags */
+    
+    .tags li {
+  display: inline-block;
+  margin-right: 2px;
+  padding: 3px 6px;
+  font-size: 0.85em;
+  border-radius: 8px;
+  color: #fff;
+    }
+    
+    .tags .variant-a {
+  background-color: rgb(231, 63, 77);
+    }
+    
+    .tags .variant-b {
+  background-color: #0f59a8;
+    }
+    
+    .tags .variant-c {
+  background-color: #238592;
+    }
+    
+    .tags .variant-d {
+  background-color: rgb(11, 141, 91);
+    }
+    
+    .tags .variant-e {
+  background-color: #ff9300;
+    }
+    .tags .variant-f {
+      background-color: #444444;
+        }
+    /* Audio */
+    
+    .box {
+  padding: 20px;
+  margin: 10px 0;
+  background-color: #e0e0e0;
+  border-radius: 15px;
+    }
+    
+    .box h3 {
+  font-size: 1.15em;
+  margin-bottom: 15px;
+    }
+    
+    .box audio {
+  width: 100%;
+  margin-bottom: 15px;
+    }
+    
+    .box code {
+  display: block;
+  word-wrap: break-word;
+    }
+    
+    /* Footer */
+    
+    footer {
+  margin: 30px 0;
+  padding: 0 20px;
+  text-align: center;
+  color: #666;
+  line-height: 1.4em;
+    }
+    
+    /* Responsive */
+    
+    @media(max-width: 600px) {
+  header .wrapper {
+      padding: 15px;
+  }
+    
+  header .logo {
+      max-width: 90%;
+  }
+    
+  header p:first-child {
+      margin-bottom: 5px;
+  }
+    
+  header .actions {
+      position: relative;
+      top: initial;
+      right: initial;
+      margin-top: 20px;
+  }
+    
+  header .actions li {
+      display: inline-block;
+      margin-right: 8px;
+      margin-bottom: 0;
+  }
+    
+  .sponsors ul {
+      grid-template-columns: repeat(2, 1fr);
+  }
+    
+  .sponsors .name {
+      margin: 5px;
+  }
+    
+  .grid {
+      display: block;
+  }
+    
+  .grid > * {
+      margin-bottom: 15px;
+  }
+    
+  .wrapper > h2 {
+      text-align: center;
+      margin-left: 0;
+  }
+    
+  .wrapper > article {
+      padding: 0;
+  }
+    }
+    
+    
