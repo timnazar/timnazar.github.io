@@ -269,6 +269,7 @@ p a {
     
 article .tags {
   display: inline-block;
+  margin-top: 10px;
 }
 
 article .action {
@@ -280,9 +281,11 @@ article .action {
 }
     
     article .links {
+  font-family: 'IBM Plex Serif', serif;
+
   margin: 20px 0 28px 0;
   padding: 20px;
-  background-color: #f3f3f3;
+  background-color: #fcf9f0 /*#f3f3f3*/;
   border-radius: 15px;
     }
     
@@ -291,8 +294,7 @@ article .action {
     }
     
 article .links p {
-  font-family: 'IBM Plex Serif', serif;
-  color: #d03320;
+  color: #ce9b4b;
   font-size: 1em;
   margin: 0 0 12px 0;
 }
@@ -303,8 +305,9 @@ article .links ul {
 }
     
 article .links li {
+  list-style: square;
   margin-top: 10px;
-  font-size: 1.15em;
+  font-size: 1em;
 }
     
     article .links a {
@@ -398,7 +401,7 @@ article .links li {
 }
     
     .tags .variant-c {
-  background-color: #238592;
+  background-color: #34c0d3;
     }
     
     .tags .variant-d {
@@ -503,7 +506,7 @@ article .links li {
 .posted-at {
   display: block;
   color: rgba(0, 0, 0, 0.54);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .intro {
