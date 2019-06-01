@@ -496,3 +496,7 @@ p a {
   color: rgba(0, 0, 0, 0.54);
   margin-bottom: 20px;
 }
+
+.intro {
+  margin-top: 1em;
+}
