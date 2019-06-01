@@ -29,6 +29,7 @@
     <article class="tutorial">
       <h1>How to Swift on Windows</h1>
       <div class="metadata">
+        <time class="posted-at">Dec 9, 2018</time>
         <!-- <span class="type">Tutorial</span> -->
         <ul class="tags">
           <li class="variant-f">shell</li>
@@ -40,19 +41,54 @@
       <p>Before installing any distros for Windows Subsystem for Linux (WSL), you must open PowerShell as Administrator and run:</p>
       <div class="box">
         <code>
-          Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+          <strong>Enable-WindowsOptionalFeature -Online -FeatureName</strong> Microsoft-Windows-Subsystem-Linux
         </code>
       </div>
-      <p>then <a href="https://www.microsoft.com/store/productId/9NBLGGH4MSV6">download Ubuntu Shell</a> from Microsoft store.</p>
+      <p>then <a href="https://www.microsoft.com/store/productId/9NBLGGH4MSV6" target="_blank">download Ubuntu Shell</a> from Microsoft store.</p>
       <h2>Step 2 – Installing Swift</h2>
       <p>First, ensure you have the latest list of packages on you system, then install Swift’s prerequisites, which include clang and Python 2.7 components:</p>
       <div class="box">
         <code>
-          sudo apt-get update<br/>
-          sudo apt-get install clang libicu-dev libpython2.7
+          <strong>sudo apt-get update</strong><br/>
+          <strong>sudo apt-get install</strong> clang libicu-dev libpython2.7
         </code>
       </div>
       <p>Now you will need open Ubuntu Shell and create user account in Ubuntu System.</p>
+      <p>Next, download latest Swift Snapshot from swift.org.</p>
+      <div class="box">
+        <code>
+            <strong>wget</strong> https://swift.org/builds/swift-4.2.1-release/ubuntu1804/swift-4.2.1-RELEASE/swift-4.2.1-RELEASE-ubuntu18.04.tar.gz
+        </code>
+      </div>
+      <p>Unzip downloaded archive</p>
+      <div class="box">
+        <code><strong>tar xzf</strong> swift-4.2.1-RELEASE-ubuntu18.04.tar.gz</code>
+      </div>
+      <p>Make sure where you downloaded archive by typing <code>pwd</code>. I downloaded the archive to <code>/home/timnazar/downloads</code> and moved the unpacked files to <code>/etc/swift-4.2.1</code>.</p>
+      <p>Then add the Swift toolchain to your PATH</p>
+      <div class="box">
+        <code>
+          <strong>export PATH=</strong>/etc/swift-4.2.1/usr/bin:<strong>"${PATH}"</strong>
+        </code>
+      </div>
+      <p>Entering this command will only add the <code>swift</code> command to your path for your current shell session. to make sure that it is added automatically in future sessions, add it to the <code>.bashrc</code> file.</p>
+      <p>Open the <code>.bashrc</code> file</p>
+      <div class="box">
+        <code>nano ~/.bashrc</code>
+      </div>
+      <p>Add the following lines at the end of the file</p>
+      <div class="box">
+        <code>
+          <strong># Importing the Swift Toolchain</strong><br/>
+          <strong>export PATH=</strong>/etc/swift-4.2.1/usr/bin:<strong>"${PATH}"</strong>
+        </code>
+      </div>
+      <p>Save and exit the file. To make sure everything works, run the <code>swift --version</code> command.</p>
+      <h2>Step 3 — Getting Windows files from Ubuntu Shell</h2>
+      <p>All of your Windows Drives (Local Disks) mounted in /mnt. You can check it by typing <code><strong>ls</strong> /mnt</code>.</p>
+      <p>Thus, you can write code in <code>VSCode</code>/<code>Sublime</code>/etc, and compile it in your Ubuntu Shell.</p>
+      <p>Also if you’re writing some Server Side code, you can access to it from your local browser.</p>
+      <p>Enjoy <strong>Swift</strong>! ❤️</p>
     </article>
   </div>
   <footer>

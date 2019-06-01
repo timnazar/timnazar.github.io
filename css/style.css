@@ -212,7 +212,6 @@ p a {
     article h1 {
   font-size: 1.9em;
   line-height: 1.1em;
-  margin-bottom: 10px;
     }
     
     article h2 {
@@ -492,4 +491,8 @@ p a {
   }
     }
     
-    
+.posted-at {
+  display: block;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 20px;
+}
