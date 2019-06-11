@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
 
 * {
   margin: 0;
@@ -315,7 +314,7 @@ article .links li {
     /* Code */
     
     code {
-      font-family: 'Roboto Mono', monospace;
+      font-family: 'Consolas', monospace;
     }
    
     
