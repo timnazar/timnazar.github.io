@@ -1,8 +1,5 @@
 @import url('https://fonts.google.com/specimen/Space+Mono');
-
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif&display=swap');
 
 * {
   margin: 0;
@@ -11,7 +8,7 @@
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Bitter', sans-serif;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
 }
@@ -76,7 +73,7 @@ header .actions a {
   height: 100%;
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  color: #0088cc;
+  color: #007AFF;
 }
 
 header .actions a:hover {
@@ -99,8 +96,9 @@ ul {
  
 }
 
-ul  li {
+ul li {
   margin-left: 24px;
+  margin-top: 4px;
 }
 
 ul.actions {
@@ -120,12 +118,18 @@ a {
 
 ul li a {
   text-decoration: underline;
-  color: #0088cc;
+  color: #007AFF;
+}
+
+ul li p.footnote {
+  font-size: 0.75em;
+  color: #666;
+  margin-top: 2px;
 }
 
 p a {
   text-decoration: underline;
-  color: #0088cc;
+  color: #007AFF;
 }
 
 a.button {
@@ -140,11 +144,11 @@ a.button {
 /* Headings */
 .wrapper > h2 {
   text-align: left;
-  /* margin-left: 12px; */
-  margin-bottom: 15px;
+  margin-bottom: 8px;
   margin-top: 24px;
-  color: #666;
   font-weight: 400;
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1em;
 }
 
 /* Sponsors */
@@ -475,11 +479,12 @@ article .links li {
   footer {
     margin: 30px 0;
     padding: 0;
-    text-align: center;
+    /* text-align: center; */
     color: #666;
     line-height: 1.4em;
     position: absolute;
     bottom: 0;
+    margin-right: 10px;
   }
     
     /* Responsive */
